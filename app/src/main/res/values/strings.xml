@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RPS</string>
+    <string name="imagebutton">imageButton</string>
+    <string name="high_score">HIGH SCORE</string>
+    <string name="choose_a_patten_to_win">Choose a patten to WIN!</string>
+    <string name="enemy">Enemy</string>
+    <string name="score">Score</string>
+    <string name="time">Time</string>
+    <string name="vs">VS</string>
+    <string name="paper">paper</string>
+    <string name="player">player</string>
+    <string name="rock">rock</string>
+    <string name="scissors">scissors</string>
+    <string name="what">what</string>
+    <string name="whatplayer">whatplayer</string>
+    <string name="_10">10</string>
+</resources>
