@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class gameActivity extends AppCompatActivity {
 
@@ -61,6 +62,7 @@ public class gameActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), endActivity.class);
                 startActivity(intent);
 
+                Toast.makeText(gameActivity.this,"Game End",Toast.LENGTH_SHORT).show();
                 SharedPreferences sharedPref = getSharedPreferences("ptdipwt5", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putInt("highscore", wins);

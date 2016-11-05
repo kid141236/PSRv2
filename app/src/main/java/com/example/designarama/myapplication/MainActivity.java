@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), gameActivity.class);
                 startActivity(intent);
-
+                Toast.makeText(MainActivity.this,"game Start",Toast.LENGTH_SHORT).show();
                 soundPool.play(startsound, 1.0F, 1.0F, 0, 0, 1.0F);
 
             }
