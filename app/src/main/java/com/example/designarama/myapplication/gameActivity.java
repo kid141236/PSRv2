@@ -54,7 +54,7 @@ public class gameActivity extends AppCompatActivity {
 
             public void onTick(long millisUntilFinished) {
                 timers = (TextView) findViewById(R.id.timer);
-                timers.setText(" " + millisUntilFinished / 0000);
+                timers.setText(" " + millisUntilFinished / 1000);
             }
 
             public void onFinish() {
