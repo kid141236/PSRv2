@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity{
     private SoundPool soundPool;
 
     private int startsound;
-
+    private int Clickbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity{
         setting = (ImageView)findViewById(R.id.setting);
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 5);
         startsound = soundPool.load(this, R.raw.start, 1);
+        Clickbutton = soundPool.load(this, R.raw.score2, 1);
 
         ImageButton startgame = (ImageButton) findViewById(R.id.start);
         startgame.setOnClickListener(new View.OnClickListener() {
@@ -34,9 +35,20 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), gameActivity.class);
                 startActivity(intent);
-                Toast.makeText(MainActivity.this,"game Start",Toast.LENGTH_SHORT).show()；
+                Toast.makeText(MainActivity.this,"Game Start",Toast.LENGTH_SHORT).show();
                 soundPool.play(startsound, 1.0F, 1.0F, 0, 0, 1.0F);
 
+            }
+        });
+
+        ImageButton htp = (ImageButton) findViewById(R.id.htp);
+        htp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Howtoplay.class);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this,"Enjoy",Toast.LENGTH_SHORT).show();
+                soundPool.play(Clickbutton, 1.0F, 1.0F, 0, 0, 1.0F);
             }
         });
 

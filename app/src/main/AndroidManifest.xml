@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".gameActivity" />
         <activity android:name=".endActivity" />
+        <activity android:name=".Howtoplay"></activity>
     </application>
 
 </manifest>
